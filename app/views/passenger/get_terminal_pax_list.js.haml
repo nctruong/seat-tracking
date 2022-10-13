@@ -1,0 +1,5 @@
+-if @error
+  Swal.fire("#{@messages.join(', ')}", "", "error")
+-else
+  $('.passenger-list').replaceWith("#{j render :partial => 'home/passenger_list'}")
+  $('.trip-number').replaceWith("#{j render :partial => 'home/trip_name'}")

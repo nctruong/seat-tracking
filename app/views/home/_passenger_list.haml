@@ -1,0 +1,38 @@
+.passenger-list
+  .row.d-flex.justify-content-end.flex-row.js-search-group
+    .input-group.mb-3.mt-2{style: 'max-width: 300px'}
+      %input.form-control.js-search-pax{"aria-describedby" => "basic-addon2", "aria-label" => "Recipient's username",
+      :placeholder => "Name", :type => "text",
+      "data-action" => "keyup->passenger#search_passenger",
+      "data-passenger-trip-id-param" => @facade.trip&.trip_id}/
+      %span#basic-addon2.input-group-text
+        %i.fa.fa-search{"data-action" => "click->passenger#btn_search_passenger", style: 'cursor: pointer'}
+    .p-2{style: 'max-width: 100px;margin-left: -15px'}
+      %button.btn.btn-green{"data-action" => "click->passenger#clear_search"}
+        Clear
+  .row
+    %table.table.table-hover
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} Name
+          %th{:scope => "col"} Deck
+          %th{:scope => "col"} Seat
+          %th{:scope => "col"} Passport
+          %th{:scope => "col"} Phone
+          %th{:scope => "col"} Boarding Pass
+      %tbody
+        - @facade.pax_in_order.each_with_index do |passenger,i|
+          -i+=1
+          %tr
+            %th{:scope => "row"}= i
+            %td
+              %a.text-decoration-none{"data-action" => "passenger#manuallyAssignSeat", href: '#',
+                    "data-passenger-id-param" => passenger.id,
+                    "data-passenger-name-param" => passenger.name}= passenger.name
+            = render :partial => 'home/td_deck', locals: {passenger:passenger}
+            = render :partial => 'home/td_seat', locals: {passenger:passenger}
+            %td= passenger.passport
+            %td= passenger.phone
+            %td= passenger.boarding_pass
+

@@ -1,0 +1,22 @@
+-if @success
+  window.location = '/?history=true'
+-else
+  Swal.fire('Done! Can not synchronize all passengers due to some not updating seats yet.', '', 'warning')
+  -#Swal.fire({
+  -#title: 'Can not synchronize all passengers due to some not updating seats yet.',
+  -#showDenyButton: true,
+  -#confirmButtonText: 'Sync only passengers who have Seat',
+  -#denyButtonText: `Don't sync`,
+  -#}).then((result) => {
+  -#if (result.isConfirmed) {
+  -#$.ajax({
+  -#url: '/api/v1/trip/sync_all',
+  -#data: {force: true},
+  -#method: 'POST',
+  -#success: function() {
+  -#window.location = '/?id=history'
+  -#}
+  -#})
+  -#} else if (result.isDenied) {
+  -#}
+  -#})

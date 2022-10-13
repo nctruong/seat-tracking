@@ -1,0 +1,5 @@
+-if params[:trip_id].present?
+  $('.passenger-list').replaceWith("#{j render :partial => 'home/passenger_list'}")
+-else
+  $('.js-history-table').replaceWith("#{j render :partial => 'home/history_list'}")
+$('.js-search-pax').focus()

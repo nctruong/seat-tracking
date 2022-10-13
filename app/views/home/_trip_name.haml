@@ -1,0 +1,7 @@
+%h5.trip-number.mb-3
+  = @facade.trip ? "Trip #{@facade.trip.trip_id}" : "NO TRIP"
+  %small
+    %span.confirmed-count= "#{@facade.confirmed_count}"
+    = "/ #{@facade.pax_in_order.size})"
+  - if not @facade.trip.nil? || @facade.pax_in_order.empty?
+    %small.mb-2{style: 'color: lightgray; font-weight: 100;font-size: 12px'} Updated at #{@facade.pax_in_order.last.created_at.strftime('%d/%m/%Y %H:%M')}

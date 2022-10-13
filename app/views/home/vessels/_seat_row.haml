@@ -1,0 +1,6 @@
+-max_num = local_assigns[:max_num]
+-prefix = local_assigns[:prefix]
+.row.seat-row
+  -max_num.times do |i|
+    -i+=1
+    .ocean-raider-seat.seat-sw.active{class: "#{@facade.seats["#{prefix}#{i}"] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"}= "#{prefix}#{i}"

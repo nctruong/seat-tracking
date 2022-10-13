@@ -1,0 +1,7 @@
+%td.js-td-deck{id: "js-td-deck-#{passenger.id}"}
+  -if passenger.seat
+    .deck-seat.badge{class: deck_color(passenger)}
+      -if vessels?
+        = passenger.deck&.titleize
+      -else
+        = passenger.main? ? 'main' : 'lower'

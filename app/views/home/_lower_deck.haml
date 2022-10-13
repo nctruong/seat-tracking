@@ -1,0 +1,45 @@
+#lower-deck
+  %label.h1.mt-5 Lower Deck
+
+  .shipbox
+    -#.ship-head.row
+    -#  #curved-corner-topleft
+    -#  #curved-corner-topright
+    .row.seat-row.mb-5{style: 'padding-left: 54px;'}
+      .seat.empty
+      .seat.seat-standard.active{class: "lower-l1 #{@seats['L1'] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"} L1
+      .seat.seat-standard.active{class: "lower-l2 #{@seats['L2'] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"} L2
+      .seat.seat-standard.active{class: "lower-l3 #{@seats['L3'] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"} L3
+
+      .seat.empty
+
+      .seat.seat-standard.active{class: "lower-l4 #{@seats['L4'] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"} L4
+      .seat.seat-standard.active{class: "lower-l5 #{@seats['L5'] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"} L5
+      .seat.seat-standard.active{class: "lower-l6 #{@seats['L6'] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"} L6
+      .seat.empty
+    -seat_no = 7
+    -12.times do |i|
+      .row.seat-row
+        -if [0,1,2,7].include?(i)
+          .seat.empty
+        -else
+          .seat.seat-standard.active{class: "lower-l#{seat_no} #{@seats["L#{seat_no}"] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"}
+            = "L#{seat_no}"
+            -seat_no += 1
+        -4.times do
+          .seat.seat-standard.active{class: "lower-l#{seat_no} #{@seats["L#{seat_no}"] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"}
+            = "L#{seat_no}"
+            -seat_no += 1
+
+        .seat.empty
+
+        -4.times do
+          .seat.seat-standard.active{class: "lower-l#{seat_no} #{@seats["L#{seat_no}"] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"}
+            = "L#{seat_no}"
+            -seat_no += 1
+        -if [0,1,2,7].include?(i)
+          .seat.empty
+        -else
+          .seat.seat-standard.active{class: "lower-l#{seat_no} #{@seats["L#{seat_no}"] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"}
+            = "L#{seat_no}"
+            -seat_no += 1

@@ -1,0 +1,81 @@
+.navbar { display: none !important;}
+body {
+  background: lightskyblue;
+  overflow: hidden;
+}
+nav.navbar {
+  background: #2E2F30;
+  margin: 0px 0px;
+  color: white;
+  padding: 2vh;
+}
+.title {
+  //background: #2E2F30;
+  margin: 0px 0px;
+  color: coral;
+  padding: 2vh;
+}
+.title h1 {
+  text-align: center;
+  font-size: 5vh;
+}
+.tv-passenger-list {
+  width: 100%;
+  margin: auto;
+  ul { width: 100%; }
+  ul li {
+    //background: #365899;
+    //color: white !important;
+    //margin: 2px 0px;
+    font-size: 4vh;
+
+    color: #fff;
+    //font-size: 92px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Josefin Sans", sans-serif;
+    background: linear-gradient(to right,#095fab 100%, #25abe8 50%, red 60%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    //animation: textclip 15s linear infinite;
+    display: inline-block;
+    border: 1px solid;
+  }
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.video {
+  width: 500px;
+  height: 500px;
+  top: 15px;
+  left: 15px;
+  position: absolute;
+}
+.fullscreen-video {
+  position: fixed;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -10;
+}
+video{
+  height: auto;
+}
+.tv-logo-wrapper {
+  width: 100vw;
+  height: 100vh;
+}

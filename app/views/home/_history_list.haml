@@ -1,0 +1,31 @@
+.p-4.js-history-table
+  %table.table.table-hover
+    %thead
+      %tr
+        %th{:scope => "col"} #
+        %th{:scope => "col"} Name
+        %th{:scope => "col"} Passport
+        %th{:scope => "col"} No. of Trip
+        %th{:scope => "col"} Synchronized
+    %tbody
+      - names = Passenger.name_map
+      - @facade.pax_history.each_with_index do |passenger,i|
+        -i+=1
+        %tr
+          %th{:scope => "row"}= i
+          %td
+            = link_to passenger_history_path(passport: passenger.passport), remote: true, class:'text-decoration-none' do
+              = names[passenger.passport]
+          %td= passenger.passport
+          %td= passenger.counter
+          %td
+            -if @facade.count_sync[passenger.passport] == passenger.counter
+              %i.fa.fa-check-circle.synchronized
+
+#js-pax-history.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-lg{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5#exampleModalLabel.modal-title Modal title
+      .modal-body{style: 'max-height: 80vh;overflow-y: auto'}
+        \...

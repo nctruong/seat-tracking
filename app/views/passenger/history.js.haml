@@ -1,0 +1,10 @@
+$('#js-pax-history .modal-title').html("#{@passengers.first.name} (#{params[:passport]})")
+$('#js-pax-history .modal-body').html("#{j render partial: 'passenger/history_seat' }")
+$('#js-pax-history').modal('show')
+-#$(document).on('click', '.modal-title a', function(){
+-#const copyText = $(this).attr('href');
+-#navigator.clipboard.writeText(copyText);
+-#swal({title: "Đã chép: " + copyText,timer: 3000});
+-#return false
+-#})
+

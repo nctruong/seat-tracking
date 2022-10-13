@@ -1,0 +1,13 @@
+#first-deck
+  .shipbox
+    = render partial: 'home/vessels/seat_row', locals: {prefix: 'V', max_num: 8}
+    = render partial: 'home/vessels/seat_row', locals: {prefix: 'K', max_num: 51}
+    = render partial: 'home/vessels/seat_row', locals: {prefix: 'OU', max_num: 36}
+
+    .row.back-ship
+
+      .iconlist.mt-2
+        .icon.checked{:title => "Confirmed"}
+          Occupied
+        .icon.zone-standard{:title => "Standard"}
+          Vacant

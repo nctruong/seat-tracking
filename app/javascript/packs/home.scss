@@ -1,0 +1,404 @@
+@import 'adv_video';
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+body {
+  background: var(--bs-gray-200);
+}
+tbody, td, tfoot, th, thead, tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+.nav-link {
+  color: #365899;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #365899;
+}
+#v-pills-tab {
+  //border-right: 1px solid #eee;
+}
+.pill-content {
+  //border-left: 1px solid #eee;
+  width: 100%;
+}
+.table>:not(caption)>*>* {
+  padding: 0.5rem 0.5rem;
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 rgb(0 0 0 / 10%);
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: unset;
+  padding-bottom: unset;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
+}
+.nav-tabs { width: 100% }
+.swal2-container {
+  z-index: 2060 !important;
+}
+.swal2-html-container { overflow: unset !important;}
+.booking-progress .main-content {
+  white-space: nowrap;
+  min-height: 90vh;
+}
+.navbar {
+  background: antiquewhite;
+  padding: 10px;
+}
+.logo {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 600px;
+}
+.status-bar {
+  //margin-top: 0px;
+  font-size: 14px;
+  font-style: italic;
+  color: grey;
+  ul {
+    li {
+      width: 100%;
+    }
+    text-align: center;
+    list-style: inside;
+  }
+}
+.main-content {
+  //overflow: hidden;
+  min-height: 90vh;
+}
+.actions {
+  //margin: 50px auto;
+  //background: #fd571f;
+  //border-top: 2px solid #fd571f;
+  padding: 5px;
+}
+.ferries {
+  //width: 100%;
+  //max-width: 900px;
+  margin: 10px 10px;
+  //padding-right: 15px;
+}
+.decks {
+  min-height: 90vh;
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+.tab-pane .container {
+  margin-left: unset;
+}
+.decks .container{
+  //padding: 5px 25px;
+  background-color: white;
+  border-radius: 5px;
+  //box-shadow: 0 1px 2px rgba(0, 0, 0, .30);
+}
+.deck {
+  //background: white;
+  border-radius: 5px;
+  padding: 0px 13px;
+}
+.logs {
+  background: #999999;
+  margin: 5px 0px;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+.clean-reload {
+  @extend .logs
+}
+
+ul, ol, li {
+  list-style: none;
+  float: left;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.progress > li {
+  width: 100%;
+}
+
+.main-content .h1 {
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  line-height: 32px;
+  //border-top: 2px solid #d4d3c9;
+  //border-bottom: 2px solid #d4d3c9;
+}
+
+.shipbox {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  background: white;
+}
+
+.ship-head {
+  width: 100%;
+  height: 100px;
+  margin: 20px auto 0px;
+  text-align: center;
+  //background: url(../images/bg-cgv/bg-screen.png) no-repeat top center transparent;
+  background-size: 100% auto;
+}
+.seat-row {
+  padding: 10px 30px;
+}
+.seat {
+  display: inline-block;
+  border: 1px solid transparent;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  font-size: 7pt;
+  margin: 1px 1px;
+  padding: 1px 0;
+}
+
+.ocean-raider-seat {
+  display: inline-block;
+  border: 1px solid transparent;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  font-size: 7pt;
+  margin: 1px 1px;
+  padding: 7px 0px
+}
+
+.empty {
+  text-indent: -99999px;
+  border: none;
+}
+
+.seat.seat-unavailable {
+  background: #bbb;
+  color: #fff;
+}
+
+.seat.active {
+  cursor: pointer;
+}
+
+.seat-standard {
+  border: 1px solid #01c73c;
+}
+
+.seat-vipprime {
+  border: 1px solid #f71708;
+}
+
+.seat-sw {
+  border-color: #01c73c;
+
+}
+
+.icon {
+  text-align: left;
+  margin: 5px 0;
+}
+
+.icon.checked:before {
+  background: #b11500;
+}
+
+.icon:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  margin: 0 5px 0 0;
+}
+
+.icon.occupied:before {
+  background: #bbb;
+}
+
+.icon.unavailable:before {
+  background: #bbb;
+  content: "X";
+  text-align: center;
+  color: #fff;
+}
+
+.shipbox-notice {
+  //position: fixed;
+  text-align: center;
+  //top: 150px;
+  left: 15px;
+}
+.trip-number {
+  font-weight: bold;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-family: Helvetica;
+  color: black;
+  text-decoration: none;
+}
+
+.iconlist {
+  display: inline-block;
+  min-width: 25%;
+  vertical-align: top;
+}
+
+.icon.zone-standard:before {
+  border: 1px solid #01c73c;
+}
+
+.icon.zone-vipprime:before {
+  border: 1px solid #f71708;
+}
+
+.icon.zone-sw:before {
+  background: #FF62B0;
+}
+
+.seat.seat-unavailable {
+  background: #bbb;
+  color: #fff;
+}
+.seat.seat-unavailable:before {
+  content: "X";
+  position: absolute;
+  font-size: 14px;
+}
+.seat.checked, .ocean-raider-seat.checked {
+  background: #b11500 !important;
+  border-color: #b11500 !important;
+  color: white;
+}
+.synchronized {
+  color: green;
+}
+
+#curved-corner-bottomleft,
+#curved-corner-bottomright,
+#curved-corner-topleft,
+#curved-corner-topright {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#curved-corner-bottomleft:before,
+#curved-corner-bottomright:before,
+#curved-corner-topleft:before,
+#curved-corner-topright:before {
+  content: "";
+  display: block;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  border-radius: 50%;
+}
+#curved-corner-topleft {
+  float: left;
+}
+#curved-corner-bottomleft:before {
+  bottom: 0;
+  left: 0;
+  //box-shadow: -50px 50px 0 0 red;
+}
+#curved-corner-bottomright:before {
+  bottom: 0;
+  right: 0;
+  //box-shadow: 50px 50px 0 0 red;
+}
+#curved-corner-topleft:before {
+  top: 0;
+  left: 0;
+  //box-shadow: -100px -100px 0 0 #eee;
+}
+#curved-corner-topright:before {
+  top: 0;
+  right: 0;
+  //box-shadow: 100px -100px 0 0 #eee;
+}
+
+.back-ship {
+  height: 100px;
+  background: #eee;
+  margin: 15px 0px;
+}
+.status-wifi i{ color: green }
+.update-batamfast {
+}
+.bg-orange {
+  background-color: #ffbf00;
+}
+.bg-green {
+  background-color: #01c73c !important;
+}
+.passenger-list {
+  background: white;
+  border-radius: 5px;
+  button {
+    margin-left: 5px;
+  }
+  .seat {
+    padding: 5px;
+    background: #b34d4d;
+    color: white;
+    width: 100%;
+  }
+
+  .deck-seat {
+    padding: 5px;
+    background: #ffbf00;
+    color: white;
+    width: 100%;
+  }
+}
+.passenger-list .confirmed{
+  color: red;
+}
+.passenger-list .fa-check.unconfirmed{
+  color: gray;
+}
+
+.loading-icon {
+  background-image: url(./img/loading.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  background-size: 150px;
+  //width: 100%;
+  height: 500px;
+}
+#js-upload-zone {
+  width: 100%;
+  height: 200px;
+  border: 2px dotted;
+  text-align: center;
+  vertical-align: middle;
+}

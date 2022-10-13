@@ -1,0 +1,17 @@
+%table.table.table-hover.table-responsive
+  %thead
+    %tr
+      %th{:scope => "col"} #
+      %th{:scope => "col"} Trip
+      %th{:scope => "col"} Journey
+      %th{:scope => "col"} Seat
+      %th{:scope => "col"} QR Scan Time
+  %tbody
+    - @passengers.each_with_index do |passenger,i|
+      -i+=1
+      %tr
+        %th{:scope => "row"}= i
+        %td= passenger.trip&.trip_id
+        %td= "#{passenger.trip&.port_origin_name} - #{passenger.trip&.port_destination_name}"
+        %td= passenger.seat
+        %td= passenger.check_in_time

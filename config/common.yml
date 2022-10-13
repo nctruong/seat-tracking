@@ -1,0 +1,19 @@
+default: &default
+  apiKey: 8cWKQH6vLO2tCiSvHwrN6ionpcQLI0I9hnw68097
+  instruction: /adv.mp4
+  instruction_length: 52 # in second
+  deck_template: vessels
+
+development:
+  <<: *default
+  sqs_queue: batamfast_seat_sqs_development
+  instruction: /adv_test.mp4
+  vessel_id: SND
+#  depart_date: 2022-03-16
+test:
+  <<: *default
+staging:
+  <<: *default
+production:
+  vessel_id: DEMO
+  <<: *default

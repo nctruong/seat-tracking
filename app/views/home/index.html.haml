@@ -1,0 +1,78 @@
+.container-fluid
+  .row
+    .col-sm.min-vh-100.no-padding
+      %nav.navbar.navbar-light.bg-light.text-center.d-flex
+        %a.row.logo.navbar-brand{:href => "/"}
+          %h1 SEAT TRACKING DEMO
+        .actions.d-flex.justify-content-start
+
+      .col-md-12.d-flex.justify-content-between
+        .d-flex.justify-content-lg-start{style: 'margin: 15px 0px 0px 15px;'}
+          %button.btn.btn-dark.btn-sm.js-update-pax-list{title: 'Update current trip', style: 'margin: 0px 5px'}
+            %i.fa.fa-cloud-download-alt
+            %span Update Pax
+
+          = link_to '#', class: 'btn btn-danger btn-sm js-end-trip', style: 'color:white !important' do
+            %i.fa.fa-flag
+            %span End Trip
+      .main-content{"data-controller" => "passenger"}
+        .row.ferries
+          .decks.col-md-12.d-flex.flex-column
+            .d-flex.align-items-start
+              #v-pills-tab.nav.flex-column.nav-pills.me-3{"aria-orientation" => "vertical",
+              :role => "tablist", style: 'background: darkgray;'}
+                %button#v-pills-home-tab.nav-link{"aria-controls" => "v-pills-home", "aria-selected" => "true", "data-bs-target" => "#v-pills-home", "data-bs-toggle" => "pill", :role => "tab", :type => "button",
+                class: params[:history] ? '' : 'active'}
+                  %i.fa.fa-ship
+                %button#v-pills-profile-tab.nav-link{"aria-controls" => "v-pills-profile", "aria-selected" => "false", "data-bs-target" => "#v-pills-profile", "data-bs-toggle" => "pill", :role => "tab", :type => "button",
+                class: params[:history] ? 'active' : ''}
+                  %i.fa.fa-history
+
+              #v-pills-tabContent.tab-content.pill-content
+                #v-pills-home.tab-pane.fade.show{"aria-labelledby" => "v-pills-home-tab", :role => "tabpanel",
+                class: params[:adv] ? '' : 'active'}
+                  .container
+                    = render :partial => 'home/trip_name'
+
+                    %ul#myTab.nav.nav-tabs{:role => "tablist"}
+                      %li.nav-item{:role => "presentation"}
+                        %button#home-tab.nav-link.active{"aria-controls" => "home", "aria-selected" => "true",
+                        "data-bs-target" => "#decks", "data-bs-toggle" => "tab", :role => "tab", :type => "button"} Deck
+                      %li.nav-item{:role => "presentation"}
+                        %button#profile-tab.nav-link{"aria-controls" => "profile", "aria-selected" => "false",
+                        "data-bs-target" => "#passenger-list", "data-bs-toggle" => "tab", :role => "tab", :type => "button"} Passenger
+
+
+                    .tab-content
+                      = render partial: 'home/vessels/index'
+                      #passenger-list.passenger.tab-pane.fade{"aria-labelledby" => "home-tab", :role => "tabpanel"}
+                        = render :partial => 'home/passenger_list'
+
+
+                #v-pills-profile.tab-pane{"aria-labelledby" => "v-pills-profile-tab", :role => "tabpanel",
+                class: params[:history] ? 'active' : ''}
+                  .row.d-flex.justify-content-end.js-search-group
+                    .input-group.mb-3.mt-2{style: 'max-width: 300px'}
+                      %input.form-control.js-search-pax{"aria-describedby" => "basic-addon2", "aria-label" => "Recipient's username",
+                      :placeholder => "Name", :type => "text",
+                      "data-action" => "keyup->passenger#search_passenger",
+                      "data-passenger-trip-id-param" => ''}/
+                      %span#basic-addon2.input-group-text
+                        %i.fa.fa-search{"data-action" => "click->passenger#btn_search_passenger", style: 'cursor: pointer;'}
+                    .p-2{style: 'max-width: 100px;margin-left: -10px;'}
+                      %button.btn.btn-green{"data-action" => "click->passenger#clear_search"}
+                        Clear
+                  = render :partial => 'home/history_list'
+
+
+.js-modal-assign-seat.modal{:role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5.modal-title Assign Seat
+      .modal-body
+        = hidden_field_tag :seat_option, Seat.labels, class: 'js-seat-label'
+        = text_field_tag :seat, nil, class: 'js-input-seat form-control', id: 'js-input-seat', autocomplete:"off"
+      .modal-footer
+        %button.btn.btn-primary.js-submit{:type => "button"} Submit
+

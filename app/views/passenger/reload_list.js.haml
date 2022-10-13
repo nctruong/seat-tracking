@@ -1,0 +1,5 @@
+$('.trip-number').replaceWith("#{j render :partial => 'home/trip_name'}")
+$('.passenger-list').replaceWith("#{j render :partial => 'home/passenger_list'}")
+$('#first-deck').replaceWith("#{j render :partial => 'home/vessels/first_deck'}")
+$('.confirmed-count').text("#{@confirmed_count}")
+

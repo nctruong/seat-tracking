@@ -1,0 +1,83 @@
+#main-deck
+  %label.h1.mt-5{style: 'width: 90%;'} Main Deck
+
+  .shipbox
+    -#.ship-head.row
+    -#  #curved-corner-topleft
+    -#  #curved-corner-topright
+    .row.seat-row
+      .seat.empty
+      .seat.empty
+      .seat.seat-sw.active{class: "main-v2 #{@seats['V2'] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"} V2
+      .seat.seat-sw.active{class: "main-v1 #{@seats['V1'] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"} V1
+
+      .seat.empty
+
+      .seat.seat-sw.active{class: "main-v6 #{@seats['V6'] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"} V6
+      .seat.empty
+      .seat.empty
+      .seat.empty
+    .row.seat-row
+      .seat.empty
+      .seat.seat-sw.active{class: "main-v3 #{@seats['V3'] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"} V3
+      .seat.empty
+      .seat.empty
+
+      .seat.empty
+
+      .seat.empty
+      .seat.empty
+      .seat.seat-sw.active{class: "main-v7 #{@seats['V7'] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"} V7
+      .seat.empty
+    .row.seat-row.mb-5
+      .seat.empty
+      .seat.empty
+      .seat.seat-sw.active{class: "main-v4 #{@seats['V4'] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"} V4
+      .seat.seat-sw.active{class: "main-v5 #{@seats['V5'] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"} V5
+
+      .seat.empty
+
+      .seat.seat-sw.active{class: "main-v9 #{@seats['V9'] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"} V9
+      .seat.seat-sw.active{class: "main-v8 #{@seats['V8'] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"} V8
+      .seat.empty
+      .seat.empty
+
+    - seat_no = 1
+    -7.times do
+      .row.seat-row
+        - 4.times do
+          .seat.seat-standard.active{class:"main-m#{seat_no} #{@seats["M#{seat_no}"] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"}
+            = "M#{seat_no}"
+            -seat_no += 1
+
+        .seat.empty
+        - 4.times do
+          .seat.seat-standard.active{class:"main-m#{seat_no} #{@seats["M#{seat_no}"] ? 'checked' : ''}", 'data-toggle':"tooltip",'data-placement':"top"}
+            = "M#{seat_no}"
+            -seat_no += 1
+    -seat_no1 = seat_no
+    -seat_no2 = seat_no + 4
+    - 4.times do
+      .row.seat-row
+        .seat.empty
+        .seat.empty
+        .seat.empty
+        .seat.seat-standard.active{class:"main-m#{seat_no1} #{@seats["M#{seat_no}"] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"}
+          = "M#{seat_no1}"
+          -seat_no1 += 1
+        .seat.empty
+        .seat.seat-standard.active{class:"main-m#{seat_no2} #{@seats["M#{seat_no}"] ? 'checked' : ''}",'data-toggle':"tooltip",'data-placement':"top"}
+          = "M#{seat_no2}"
+          -seat_no2 += 1
+        .seat.empty
+        .seat.empty
+        .seat.empty
+
+
+    .row.back-ship
+
+      .iconlist.mt-2
+        .icon.checked{:title => "Confirmed"}
+          Occupied
+        .icon.zone-standard{:title => "Standard"}
+          Vacant

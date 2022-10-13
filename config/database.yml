@@ -1,0 +1,26 @@
+# SQLite. Versions 3.8.0 and up are supported.
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['DB_USERNAME'] || 'batam_dev' %>
+  password: <%= ENV['DB_PASSWORD'] || 'example' %>
+  host: 0.0.0.0
+
+development:
+  <<: *default
+  database: batam_dev
+
+test:
+  <<: *default
+  database: batam_test
+
+production:
+  <<: *default
+  username: 'batam_prod'
+  password: '123456'
+  database: batam_prod

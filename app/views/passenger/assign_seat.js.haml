@@ -1,0 +1,8 @@
+$('#passenger-list').html("#{j render :partial => 'home/passenger_list'}")
+$('#main-deck').replaceWith("#{j render :partial => 'home/main_deck'}")
+$('#lower-deck').replaceWith("#{j render :partial => 'home/lower_deck'}")
+$('#first-deck').replaceWith("#{j render :partial => 'home/vessels/first_deck'}")
+$('#second-deck').replaceWith("#{j render :partial => 'home/vessels/second_deck'}")
+$('#third-deck').replaceWith("#{j render :partial => 'home/vessels/third_deck'}")
+$('.trip-number').replaceWith("#{j render :partial => 'home/trip_name'}")
+$('.modal').modal('hide')

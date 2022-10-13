@@ -1,0 +1,11 @@
+.logs.d-flex.flex-column
+  %button.btn.btn-green.btn-sm.js-update-pax-list.mb-2{title: 'Update current trip'}
+    %i.fa.fa-edit
+    %span Pax
+  - if not @trip.nil? || @passengers.empty?
+    %span.small.mb-2 Updated at #{@passengers.last.created_at.strftime('%d/%m/%Y %H:%M')}
+
+  %button.btn.btn-dark.btn-sm.js-get-terminal-pax-list{title: 'Update current trip', disabled: @trip&.origin_is_singapore?}
+    %i.fa.fa-edit
+    %span Terminal Pax
+

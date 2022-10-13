@@ -1,0 +1,204 @@
+{
+  "adv_video.js": "/packs/adv_video-a8b53fbbbd37db7acb32.js",
+  "adv_video.js.map": "/packs/adv_video-a8b53fbbbd37db7acb32.js.map",
+  "adv_video_sortable.js": "/packs/adv_video_sortable-a8b53fbbbd37db7acb32.js",
+  "adv_video_sortable.js.map": "/packs/adv_video_sortable-a8b53fbbbd37db7acb32.js.map",
+  "application.js": "/packs/application-a8b53fbbbd37db7acb32.js",
+  "application.js.map": "/packs/js/application-9b83b7fe7157e4138a79.hot-update.js.map",
+  "clean_with_reload.js": "/packs/clean_with_reload-a8b53fbbbd37db7acb32.js",
+  "clean_with_reload.js.map": "/packs/clean_with_reload-a8b53fbbbd37db7acb32.js.map",
+  "controllers/adv_controller.js": "/packs/controllers/adv_controller-a8b53fbbbd37db7acb32.js",
+  "controllers/adv_controller.js.map": "/packs/controllers/adv_controller-a8b53fbbbd37db7acb32.js.map",
+  "controllers/passenger_controller.js": "/packs/controllers/passenger_controller-a8b53fbbbd37db7acb32.js",
+  "controllers/passenger_controller.js.map": "/packs/controllers/passenger_controller-a8b53fbbbd37db7acb32.js.map",
+  "end_trip.js": "/packs/end_trip-a8b53fbbbd37db7acb32.js",
+  "end_trip.js.map": "/packs/end_trip-a8b53fbbbd37db7acb32.js.map",
+  "entrypoints": {
+    "adv_video_sortable": {
+      "js": [
+        "/packs/adv_video_sortable-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/adv_video_sortable-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "adv_video": {
+      "js": [
+        "/packs/adv_video-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/adv_video-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "application": {
+      "js": [
+        "/packs/application-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/application-a8b53fbbbd37db7acb32.js.map",
+        "/packs/js/application-9b83b7fe7157e4138a79.hot-update.js.map"
+      ]
+    },
+    "clean_with_reload": {
+      "js": [
+        "/packs/clean_with_reload-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/clean_with_reload-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "controllers/adv_controller": {
+      "js": [
+        "/packs/controllers/adv_controller-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/controllers/adv_controller-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "controllers/passenger_controller": {
+      "js": [
+        "/packs/controllers/passenger_controller-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/controllers/passenger_controller-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "end_trip": {
+      "js": [
+        "/packs/end_trip-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/end_trip-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "get_terminal_pax_list": {
+      "js": [
+        "/packs/get_terminal_pax_list-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/get_terminal_pax_list-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "home": {
+      "js": [
+        "/packs/home-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/home-a8b53fbbbd37db7acb32.js.map",
+        "/packs/js/home-9b83b7fe7157e4138a79.hot-update.js.map"
+      ]
+    },
+    "img/loading": {
+      "js": [
+        "/packs/img/loading-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/img/loading-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "passenger": {
+      "js": [
+        "/packs/passenger-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/passenger-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "stimulus_app": {
+      "js": [
+        "/packs/stimulus_app-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/stimulus_app-a8b53fbbbd37db7acb32.js.map",
+        "/packs/js/stimulus_app-9b83b7fe7157e4138a79.hot-update.js.map"
+      ]
+    },
+    "tv_video_replay": {
+      "js": [
+        "/packs/tv_video_replay-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/tv_video_replay-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "tv": {
+      "js": [
+        "/packs/tv-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/tv-a8b53fbbbd37db7acb32.js.map",
+        "/packs/js/tv-9b83b7fe7157e4138a79.hot-update.js.map"
+      ]
+    },
+    "update_pax_list": {
+      "js": [
+        "/packs/update_pax_list-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/update_pax_list-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "update_with_reload": {
+      "js": [
+        "/packs/update_with_reload-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/update_with_reload-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "upload_adv": {
+      "js": [
+        "/packs/upload_adv-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/upload_adv-a8b53fbbbd37db7acb32.js.map"
+      ]
+    },
+    "wifi": {
+      "js": [
+        "/packs/wifi-a8b53fbbbd37db7acb32.js"
+      ],
+      "js.map": [
+        "/packs/wifi-a8b53fbbbd37db7acb32.js.map"
+      ]
+    }
+  },
+  "get_terminal_pax_list.js": "/packs/get_terminal_pax_list-a8b53fbbbd37db7acb32.js",
+  "get_terminal_pax_list.js.map": "/packs/get_terminal_pax_list-a8b53fbbbd37db7acb32.js.map",
+  "home.js": "/packs/home-a8b53fbbbd37db7acb32.js",
+  "home.js.map": "/packs/js/home-9b83b7fe7157e4138a79.hot-update.js.map",
+  "img/loading.js": "/packs/img/loading-a8b53fbbbd37db7acb32.js",
+  "img/loading.js.map": "/packs/img/loading-a8b53fbbbd37db7acb32.js.map",
+  "media/packs/img/loading.gif": "/packs/media/packs/img/loading-652b8dd7e03e6ccb3ee440e8bfdbb05b.gif",
+  "media/webfonts/fa-brands-400.eot": "/packs/media/webfonts/fa-brands-400-23f19bb0.eot",
+  "media/webfonts/fa-brands-400.svg": "/packs/media/webfonts/fa-brands-400-2f517e09.svg",
+  "media/webfonts/fa-brands-400.ttf": "/packs/media/webfonts/fa-brands-400-527940b1.ttf",
+  "media/webfonts/fa-brands-400.woff": "/packs/media/webfonts/fa-brands-400-2285773e.woff",
+  "media/webfonts/fa-brands-400.woff2": "/packs/media/webfonts/fa-brands-400-d878b0a6.woff2",
+  "media/webfonts/fa-regular-400.eot": "/packs/media/webfonts/fa-regular-400-77206a6b.eot",
+  "media/webfonts/fa-regular-400.svg": "/packs/media/webfonts/fa-regular-400-4689f52c.svg",
+  "media/webfonts/fa-regular-400.ttf": "/packs/media/webfonts/fa-regular-400-491974d1.ttf",
+  "media/webfonts/fa-regular-400.woff": "/packs/media/webfonts/fa-regular-400-bb58e57c.woff",
+  "media/webfonts/fa-regular-400.woff2": "/packs/media/webfonts/fa-regular-400-7a333762.woff2",
+  "media/webfonts/fa-solid-900.eot": "/packs/media/webfonts/fa-solid-900-9bbb245e.eot",
+  "media/webfonts/fa-solid-900.svg": "/packs/media/webfonts/fa-solid-900-7a8b4f13.svg",
+  "media/webfonts/fa-solid-900.ttf": "/packs/media/webfonts/fa-solid-900-be9ee23c.ttf",
+  "media/webfonts/fa-solid-900.woff": "/packs/media/webfonts/fa-solid-900-eeccf4f6.woff",
+  "media/webfonts/fa-solid-900.woff2": "/packs/media/webfonts/fa-solid-900-1551f4f6.woff2",
+  "passenger.js": "/packs/passenger-a8b53fbbbd37db7acb32.js",
+  "passenger.js.map": "/packs/passenger-a8b53fbbbd37db7acb32.js.map",
+  "stimulus_app.js": "/packs/stimulus_app-a8b53fbbbd37db7acb32.js",
+  "stimulus_app.js.map": "/packs/js/stimulus_app-9b83b7fe7157e4138a79.hot-update.js.map",
+  "tv.js": "/packs/tv-a8b53fbbbd37db7acb32.js",
+  "tv.js.map": "/packs/js/tv-9b83b7fe7157e4138a79.hot-update.js.map",
+  "tv_video_replay.js": "/packs/tv_video_replay-a8b53fbbbd37db7acb32.js",
+  "tv_video_replay.js.map": "/packs/tv_video_replay-a8b53fbbbd37db7acb32.js.map",
+  "update_pax_list.js": "/packs/update_pax_list-a8b53fbbbd37db7acb32.js",
+  "update_pax_list.js.map": "/packs/update_pax_list-a8b53fbbbd37db7acb32.js.map",
+  "update_with_reload.js": "/packs/update_with_reload-a8b53fbbbd37db7acb32.js",
+  "update_with_reload.js.map": "/packs/update_with_reload-a8b53fbbbd37db7acb32.js.map",
+  "upload_adv.js": "/packs/upload_adv-a8b53fbbbd37db7acb32.js",
+  "upload_adv.js.map": "/packs/upload_adv-a8b53fbbbd37db7acb32.js.map",
+  "wifi.js": "/packs/wifi-a8b53fbbbd37db7acb32.js",
+  "wifi.js.map": "/packs/wifi-a8b53fbbbd37db7acb32.js.map"
+}
